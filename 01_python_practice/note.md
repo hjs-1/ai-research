@@ -70,6 +70,8 @@ git commit -m "feat: add model training script"
 # 5. 원격 저장소(GitHub)로 업로드
 git push origin main         # origin 원격 저장소의 main 브랜치로 푸시
 
+컨테이너 리빌드시 git이 없다면 반영이 느려서 그런것 - 명령팔레트(f1)에서 developer: reload window 하기
+
 # 개발 시스템 구조
 [ 3층: Dev Container ]  <-- PyTorch 2.6, CUDA Nightly, 개발 라이브러리들
          │ (VS Code가 devcontainer.json을 읽고 여기에 직접 접속)
