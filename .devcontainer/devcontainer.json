@@ -1,10 +1,16 @@
 {
     "name": "PyTorch GPU Environment",
-    "image": "pytorch/pytorch:2.2.0-cuda12.1-cudnn8-devel",
+    "image": "nvidia/cuda:12.8.0-devel-ubuntu22.04",
     "runArgs": [
-        "--gpus", "all",
+        "--gpus",
+        "all",
         "--ipc=host"
     ],
+    "containerEnv": {
+        "NVIDIA_VISIBLE_DEVICES": "all",
+        "NVIDIA_DRIVER_CAPABILITIES": "compute,utility",
+        "TORCH_CUDA_ARCH_LIST": "8.0;8.6;8.9;9.0;10.0;10.1;12.0+PTX"
+    },
     "customizations": {
         "vscode": {
             "extensions": [
@@ -14,5 +20,5 @@
             ]
         }
     },
-    "postCreateCommand": "pip install matplotlib wandb pandas scikit-learn"
+    "postCreateCommand": "apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends git python3 python3-pip python3-venv python3-dev build-essential && git config --global --add safe.directory /workspaces/ai-research && python3 -m pip install --upgrade pip setuptools wheel && python3 -m pip uninstall -y torch torchvision torchaudio || true && python3 -m pip install --no-cache-dir torch==2.11.0+cu128 torchvision==0.26.0+cu128 torchaudio==2.11.0+cu128 --extra-index-url https://download.pytorch.org/whl/cu128 && python3 -m pip install --no-cache-dir matplotlib wandb pandas scikit-learn"
 }
