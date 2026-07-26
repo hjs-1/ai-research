@@ -23,6 +23,7 @@ Dev Container 기반의 PyTorch/CUDA 연구 환경 설정부터 Git/GitHub 연�
 3. **결과 저장 (Git/GitHub):**
    * VS Code 소스 제어 탭에서 **Message 작성** 후 `Commit & Push` 버튼 클릭.
    * 또는 터미널에서 `git add .` $\rightarrow$ `git commit -m "설명"` $\rightarrow$ `git push` 실행.
+   * 이때 커밋 메시지를 적지 않았다면 COMMIT_EDITMSG 창이 열림 적고싶은 내용 적고 저장후 창닫기.
 
 ---
 
