@@ -20,5 +20,5 @@
             ]
         }
     },
-    "postCreateCommand": "apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends git python3 python3-pip python3-venv python3-dev build-essential && git config --global --add safe.directory /workspaces/ai-research && python3 -m pip install --upgrade pip setuptools wheel && python3 -m pip uninstall -y torch torchvision torchaudio || true && python3 -m pip install --no-cache-dir torch==2.11.0+cu128 torchvision==0.26.0+cu128 torchaudio==2.11.0+cu128 --extra-index-url https://download.pytorch.org/whl/cu128 && python3 -m pip install --no-cache-dir matplotlib wandb pandas scikit-learn"
+    "postCreateCommand": "apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends git openssh-client python3 python3-pip python3-venv python3-dev build-essential && git config --global --add safe.directory /workspaces/ai-research && python3 -m pip install --upgrade pip setuptools wheel && python3 -m pip uninstall -y torch torchvision torchaudio || true && python3 -m pip install --no-cache-dir torch==2.11.0+cu128 torchvision==0.26.0+cu128 torchaudio==2.11.0+cu128 --extra-index-url https://download.pytorch.org/whl/cu128 && python3 -m pip install --no-cache-dir matplotlib wandb pandas scikit-learn"
 }
