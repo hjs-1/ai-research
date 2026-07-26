@@ -1,2 +1,1 @@
-AI연구,연습 시작
-asl ubunto - docker - vscode
+AI 연구 및 연습 github 업로드 (2026.07.26 ~) by ASL Ubunto / Docker / VScode //
