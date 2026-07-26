@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+
+# Deep Learning Weights & Data
+*.pth
+*.pt
+*.ckpt
+/data/
+/dataset/
+
+# IDE
+.vscode/
