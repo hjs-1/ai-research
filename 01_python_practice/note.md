@@ -197,7 +197,7 @@ python -c "import torch; print('GPU:', torch.cuda.get_device_name(0)); print('Te
 모델을 구현하기 전, 파이토치가 데이터를 어떻게 다루고 연산하는지 손에 익혀야 합니다.
 
 학습 내용:
-
+~~
 Tensor 생성, 차원 변환(reshape, permute, transpose), 브로드캐스팅(Broadcasting)
 
 Autograd(자동 미분)의 동작 원리 이해
