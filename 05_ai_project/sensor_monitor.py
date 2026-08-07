@@ -1,3 +1,6 @@
+#ollama와 qwen36-35b-a3b-fast-mxfp4_moe 모델을 활용한 온실관리 모니터링 ai 시스템
+#modelfile.txt에 모델명과 시스템 프롬프트를 작성해두고, input 폴더에서 센서 데이터(JSON)를 감시하여 AI 분석 결과(TXT)를 생성하는 역할을 수행
+
 import os
 import time
 import json
